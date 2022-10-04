@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="ExceptionsTestSuit" verbose="1">
+	<test name="ExceptionsTests">
+		<parameter name="browser" value="chrome" />
+		<parameter name="expectedMessage"
+			value="Hello World!" />
+		<classes>
+			<class name="com.herokuapp.theinternet.ExceptionsTests">
+				<methods>
+					<exclude name="notVisibleTest"></exclude>
+					<exclude name="timeoutExceptionTest"></exclude>
+					<exclude name="noSuchElementTest"></exclude>
+					<exclude name="staleElementTest"></exclude>
+					<include name="challengeTest"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
